@@ -25,10 +25,16 @@
 						<!-- Course Tabs -->
 						<div class="course_tabs_container">
 							<div class="tabs d-flex flex-row align-items-center justify-content-start">
-								<div class="tab" style="margin-left:6em; margin-right:6em; padding-bottom:0.2em; padding-top:3em;" ><h7><?php echo $row['noidung'] ?></h7></div>
+								<div class="tab" style="margin-left:6em; margin-right:6em; padding-bottom:0.2em; padding-top:3em;" >
+									<h6>Vấn đề thường gặp: </h6> </br>
+									<h7><?php echo $row['Vande'] ?></h7>
+								</div>
 							</div>
 							<div class="tabs d-flex flex-row align-items-center justify-content-start">
-								<div class="tab" style="margin-left:6em; margin-right:6em; padding-bottom:3em; padding-top:1em;" ><h3> </h3><h7><?php echo $row['thanhtuu'] ?></h7></div>
+								<div class="tab" style="margin-left:6em; margin-right:6em; padding-bottom:3em; padding-top:1em;" >
+									<h6>Nên: </h6> </br>
+									<h7><?php echo $row['noidung'] ?></h7>
+								</div>
 							</div>
 						</div>
 				</div>

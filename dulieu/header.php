@@ -154,20 +154,21 @@
             <nav class="main_nav_contaner ml-auto">
               <ul class="main_nav" >
 
-
                 <?php
 						              $result=$conn->query("SELECT * FROM menu");
                           while($row = $result->fetch_assoc())
 				                  {
+
 					      ?>
                     <li><a href="?thread=<?php echo $row['anh'] ?>"><?php echo $row['tenmenu'] ?></a></li>
 
                 <?php
-                          }
+													}
 								if ($_SESSION['user_me'] != 0)
 								{
                 ?>
 										<li><a href="">Xin chào: <?php echo $_SESSION['usrname']; ?></a></li>
+										<li><a href="?thread=thongtintaikhoan&idnguoidung=<?php echo ($_SESSION['user_me']) ?>">Thông tin tài khoản</a></li>
 										<li><a href="?thread=logout">Thoát</a></li>
 					<?php }
 							else {?>
@@ -177,10 +178,9 @@
 								<div style="text-align: center;">Đăng nhập</div></a></li>
 
 							<?php }
-					 ?>
-
+					 		?>
               </ul>
-              <div class="search_button"><i class="fa fa-search" aria-hidden="true"></i></div>
+            
             </nav>
           </div>
         </div>

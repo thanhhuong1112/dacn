@@ -8,7 +8,7 @@
     }
     $result = $conn->query("SELECT * from monhoc");
 ?>
-<div style="padding-top:10em;">
+<div style="padding-top:8em; padding-bottom:10em;">
 <head>
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -32,50 +32,63 @@
     <link href="vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet">
 
 
+
 </head>
 
 <body>
-    <div class="row" >
-            <div class="col-md-2" role="navigation" style="margin-top: 10px;"  >
+    <div id="wrapper">
+            <div class="navbar-default sidebar" role="navigation" style="margin-top: 10px;">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                       <li>
-                          <h5><a href="?thread=admin"><i class="fa fa-university fa-lg"></i> TRANG CHỦ</h5></a></br>
-                          <h5><a href="?thread=nguoidung"><i class="fa fa-user fa-fw"></i> QUẢN LÝ NGƯỜI DÙNG</h5></a></br>
-                          <h5><a href="?thread=chucnang"><i class="fa fa-database fa-fw"></i> QUẢN LÝ TRANG</h5></a></br>
-                          <h5><a href="?thread=monhocad"><i class="fa fa-database fa-fw"></i> QUẢN LÝ MÔN HỌC</h5></a></br>
-                          <h5><a href="?thread=dethiad"><i class="fa fa-database fa-fw"></i> QUẢN LÝ ĐỀ THI</h5></a></br>
-                          <h5><a href="?thread=cauhoiad"><i class="fa fa-database fa-fw"></i> QUẢN LÝ CÂU HỎI</h5></a></br>
-                          <h5><a href="?thread=tintucad"><i class="fa fa-database fa-fw"></i> QUẢN LÝ TIN TỨC</h5></a></br>
-                          <h5><a href="?thread=thinghiemad"><i class="fa fa-database fa-fw"></i> QUẢN LÝ CÁC TN</h5></a></br>
-                          <h5><a href="?thread=biquyetad"><i class="fa fa-database fa-fw"></i> QUẢN LÝ BQTC</h5></a></br>
-                          <h5><a href="?thread=khoahocad"><i class="fa fa-database fa-fw"></i> QUẢN LÝ NHÀ KHOA HỌC</h5></a></br>
+                           <a href="?thread=admin"><i class="fa fa-university fa-lg"></i> <b>TRANG CHỦ</b></a>
+                      </li>
+                      <li>
+                          <a href="?thread=nguoidung"><i class="fa fa-user fa-fw"></i><b> QUẢN LÝ NGƯỜI DÙNG</b></a>
+                      </li>
+                      <li>
+                          <a href="?thread=monhocad"><i class="fa fa-database fa-fw"></i><b> QUẢN LÝ MÔN HỌC</b></a>
+                      </li>
+                      <li>
+                          <a href="?thread=dethiad"><i class="fa fa-database fa-fw"></i><b> QUẢN LÝ ĐỀ THI</b></a>
+                      </li>
+                      <li>
+                          <a href="?thread=cauhoiad"><i class="fa fa-database fa-fw"></i><b> QUẢN LÝ CÂU HỎI</b></a>
+                      </li>
+                      <li>
+                          <a href="?thread=tintucad"><i class="fa fa-database fa-fw"></i><b> QUẢN LÝ TIN TỨC</b></a>
+                      </li>
+                      <li>
+                          <a href="?thread=suckhoead"><i class="fa fa-database fa-fw"></i><b> QUẢN LÝ TIN SỨC KHỎE</b></a>
+                      </li>
+                      <li>
+                          <a href="?thread=biquyetad"><i class="fa fa-database fa-fw"></i><b> QUẢN LÝ BQTC</b></a>
                       </li>
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->
             </div>
             <div style="clear:both;"></div>
-            <div class="col-md-9" style="padding-top: 15px;"  >
+            <div id="page-wrapper" style="padding-top: 15px;">
                 <!-- /.row -->
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="panel panel-green">
                             <div class="panel-heading">
-                              <center><h3>DANH SÁCH CÁC MÔN HỌC </h3></center>
-                              <p><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-zoom-in"></span></button> Xem <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-zoom-in"></span></button> Thêm <button type="button" class="btn btn-info"><span class="glyphicon glyphicon-zoom-in"></span></button> Sửa <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button> Xóa</p>
+                                <center><h4>DANH SÁCH CÁC MÔN HỌC </h4></center>
                             </div>
                             <!-- /.panel-heading -->
                             <div class="panel-body">
+                              <div style="padding-bottom:1em;padding-top:1em;"><a href="?thread=themmonhoc"><button type="button" class="btn btn-success"><span class="glyphicon glyphicon-zoom-in"></span>Thêm mới</button></a> </div>
                                 <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
                                     <thead>
                                         <tr>
-                                            <th style="text-align: center">STT</th>
-                                            <th style="text-align: center">Tên môn học</th>
-                                            <th style="text-align: center">Thứ tự</th>
-                                            <th style="text-align: center">Trạng thái</th>
-                                            <th style="text-align: center">Ảnh</th>
-                                            <th style="text-align: center">Chức năng</th>
+                                          <th style="text-align: center">STT</th>
+                                          <th style="text-align: center">Tên môn học</th>
+                                          <th style="text-align: center">Ảnh</th>
+                                          <th style="text-align: center">Thứ tự</th>
+                                          <th style="text-align: center">Trạng thái</th>
+                                          <th style="text-align: center">Chức năng</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -86,28 +99,23 @@
                                         ?>
                                         <tr>
                                             <td style="text-align: center">
-                                                <?php echo $i++; ?>
+                                                   <?php echo $i++; ?>
                                             </td>
                                             <td style="text-align: center">
-                                                <?php echo $row['tenmonhoc'] ?>
+                                                    <?php echo $row['tenmonhoc'] ?>
                                             </td>
                                             <td style="text-align: center">
-                                                <?php echo $row['stt'] ?>
+                                                    <img src="<?php echo $row['anh'] ?>"style="width:100px;height:50px;">
                                             </td>
                                             <td style="text-align: center">
-                                                <?php echo $row['hide'] ?>
+                                                    <?php echo $row['stt'] ?>
                                             </td>
                                             <td style="text-align: center">
-                                                <img src="<?php echo $row['anh'] ?>"style="width:100px;height:50px;">
+                                                   <?php if ($row['hide']==1) echo "Ẩn"; else echo "Hiện"; ?>
                                             </td>
                                             <td style="text-align: center">
-                                                <a href="?thread=xemmonhoc&idmonhoc=<?php echo $row['idmonhoc']; ?>"><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-pencil"></span></button></a>
-
-                                                <a href="?thread=xemmenu&idmonhoc=<?php echo $row['idmonhoc']; ?>"><button type="button" class="btn btn-success"><span class="glyphicon glyphicon-zoom-in"></span></button><a/>
-
-                                                <a href="#"><button type="button" class="btn btn-info"><span class="glyphicon glyphicon-pencil"></span></button></a>
-
-                                                <a href="?thread=xoanguoidung&idmenu=<?php echo $row['idmenu']; ?>"><button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button></a>
+                                              <a href="?thread=xemmonhoc&idmonhoc=<?php echo $row['idmonhoc']; ?>"><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-zoom-in"></span></button></a>
+                                              <button type="button" class="btn btn-danger" onclick="if (confirm('Bạn có chắc chắn xoá mục này không?')) window.location.href='?thread=xoamonhoc&idmonhoc=<?php echo $row['idmonhoc']; ?>'"><span class="glyphicon glyphicon-trash"></span></button>
 
                                             </td>
                                         </tr>

@@ -18,13 +18,13 @@
     $result = $conn->query("UPDATE nguoidung SET hoten = '{$name}', diachi = '{$address}', matkhau = '{$password}', email = '{$email}' WHERE idnguoidung = {$idnguoidung}");
 	if ($result)
 	{
-		print "<script language='JavaScript'>alert('Sua tài khoản thành công.');</script>";
+		print "<script language='JavaScript'>alert('Sửa tài khoản thành công.');</script>";
 		print "<meta http-equiv='refresh' content='0; index.php?thread=nguoidung'>";
 		break;
 	}
 	else
 	{
-		print "<script language='JavaScript'>alert('Sua tài khoản thất bại. Vui lòng thử lại.');</script>";
+		print "<script language='JavaScript'>alert('Sửa tài khoản thất bại. Vui lòng thử lại.');</script>";
 		print "<meta http-equiv='refresh' content='0; index.php?thread=nguoidung'>";
 		break;
 	}

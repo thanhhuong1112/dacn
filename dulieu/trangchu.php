@@ -98,10 +98,10 @@
 								<div class="event_title"><a href=""></a></div>
 								<div class="event_info_container">
 									<div class="event_text">
-										<p>Ho va ten: <?php echo $row5['hoten']; ?></p>
-										<p>Dia chi: <?php echo $row5['diachi']; ?></p>
+										<p>Họ và tên: <?php echo $row5['hoten']; ?></p>
+										<p>Địa chỉ: <?php echo $row5['diachi']; ?></p>
 										<p>Email: <?php echo $row5['email']; ?></p>
-										<p>So diem: <?php echo $row5['@tsd:=sum(points)']; ?></p>
+										<p>Số điểm đạt được: <?php echo $row5['@tsd:=sum(points)']; ?></p>
 									</div>
 								</div>
 							</div>

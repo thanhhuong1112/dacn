@@ -7,26 +7,9 @@
         die("Không thể kết nối CSDL. Code: " . $conn->connect_error);
     }
 		$iddt=$_GET['iddt'];
-		$dem=0;
-		$DIEM=0;
-  if(isset($_POST['ook'])){
-    $arr=$_POST;
-    foreach ($arr as $key => $value) {
-      if(is_numeric($key)){
-        $sqll="SELECT dapan from cauhoi where idcauhoi={$key} limit 1";
-        $result1=$conn->query($sqll);
-        while ($dad = $result1->fetch_assoc()) {
-        if($value==$dad['dapan']){
-          $DIEM=$DIEM+5;
-        }
-      }
-      }
-    }
-    print "<script language='JavaScript'>alert('Số điểm bạn đạt được là: {$DIEM}');</script>";
-    print "<meta http-equiv='refresh' content='0; index.php?thread=trangchu'>";
-    // echo "Số diểm đạt được là: {$DIEM}";
-  }
+
 ?>
+
 <div class="features">
   <div class="container">
     <div class="row">
@@ -57,7 +40,11 @@
                             <td  style="padding-right:5px;"> <input type="radio" name="<?php echo $row['idcauhoi']?>" value="C" id="C"> C.   <?php echo $row['traloi3']; ?><img src="<?php echo $row['tl3'] ?>" style="width:80px; height:50px;" alt=""> </br></br></td>
                             <td  style="padding-left:5px;"> <input type="radio" name="<?php echo $row['idcauhoi']?>" value="D" id="D"> D.   <?php echo $row['traloi4']; ?><img src="<?php echo $row['tl4'] ?>" style="width:80px; height:50px;" alt=""></br></br></td>
                           </tr>
+													<tr>
+														<td>Đáp án: Câu <?php echo $row['dapan'] ?></td>
+													</tr>
                         </table><br>
+
                           <?php
                             }
                           ?>
@@ -69,4 +56,3 @@
                 </div>
             </div>
           </div>
-        </div>

@@ -15,9 +15,19 @@
 			include_once("dulieu/lienhe.php");
 			break;
 		}
+		case "thongtintaikhoan":
+		{
+			include_once("dulieu/thongtintaikhoan.php");
+			break;
+		}
 		case "dapan":
 		{
 			include_once("dulieu/dapan.php");
+			break;
+		}
+		case "tintuc":
+		{
+			include_once("dulieu/tintuc.php");
 			break;
 		}
 		case "do_login":
@@ -40,16 +50,6 @@
 			include_once("dulieu/biquyetdethanhcong.php");
 			break;
 		}
-		case "danhsachchuong":
-		{
-			include_once("dulieu/danhsachchuong.php");
-			break;
-		}
-		case "chitietchuong":
-		{
-			include_once("dulieu/chitietchuong.php");
-			break;
-		}
 		case "dethi":
 		{
 			include_once("dulieu/dethi.php");
@@ -58,21 +58,6 @@
 		case "cauhoi":
 		{
 			include_once("dulieu/cauhoi.php");
-			break;
-		}
-		case "tintuc":
-		{
-			include_once("dulieu/tintuc.php");
-			break;
-		}
-		case "cothebanchuabiet":
-		{
-			include_once("dulieu/cothebanchuabiet.php");
-			break;
-		}
-		case "chitietcothebanchuabiet":
-		{
-			include_once("dulieu/chitietcothebanchuabiet.php");
 			break;
 		}
 		case "suckhoe":
@@ -99,25 +84,12 @@
 				break;
 			}
 		}
+		//nguoidung
 		case "nguoidung":
 		{
 			if ($_SESSION['admin']==1)
 			{
 				include_once("admin/nguoidung.php");
-			break;
-			}
-			else
-			{
-				print "<script type=text/javascript> alert('Bạn không có quyền truy cập!'); </script>";
-				print "<meta http-equiv='refresh' content='0; index.php'>";
-				break;
-			}
-		}
-		case "cauhoi":
-		{
-			if ($_SESSION['admin']==1)
-			{
-				include_once("admin/cauhoi.php");
 			break;
 			}
 			else
@@ -141,11 +113,11 @@
 				break;
 			}
 		}
-		case "xoanguoidung":
+		case "themnguoidung":
 		{
 			if ($_SESSION['admin']==1)
 			{
-				include_once("admin/xoanguoidung.php");
+				include_once("admin/themnguoidung.php");
 			break;
 			}
 			else
@@ -155,109 +127,11 @@
 				break;
 			}
 		}
-		case "cauhoiad":
+		case "do-themnguoidung":
 		{
 			if ($_SESSION['admin']==1)
 			{
-				include_once("admin/cauhoiad.php");
-			break;
-			}
-			else
-			{
-				print "<script type=text/javascript> alert('Bạn không có quyền truy cập!'); </script>";
-				print "<meta http-equiv='refresh' content='0; index.php'>";
-				break;
-			}
-		}
-		case "xemcauhoi":
-		{
-			if ($_SESSION['admin']==1)
-			{
-				include_once("admin/xemcauhoi.php");
-			break;
-			}
-			else
-			{
-				print "<script type=text/javascript> alert('Bạn không có quyền truy cập!'); </script>";
-				print "<meta http-equiv='refresh' content='0; index.php'>";
-				break;
-			}
-		}
-		case "chucnang":
-		{
-			if ($_SESSION['admin']==1)
-			{
-				include_once("admin/chucnang.php");
-			break;
-			}
-			else
-			{
-				print "<script type=text/javascript> alert('Bạn không có quyền truy cập!'); </script>";
-				print "<meta http-equiv='refresh' content='0; index.php'>";
-				break;
-			}
-		}
-		case "monhocad":
-		{
-			if ($_SESSION['admin']==1)
-			{
-				include_once("admin/monhocad.php");
-			break;
-			}
-			else
-			{
-				print "<script type=text/javascript> alert('Bạn không có quyền truy cập!'); </script>";
-				print "<meta http-equiv='refresh' content='0; index.php'>";
-				break;
-			}
-		}
-		case "dethiad":
-		{
-			if ($_SESSION['admin']==1)
-			{
-				include_once("admin/dethiad.php");
-			break;
-			}
-			else
-			{
-				print "<script type=text/javascript> alert('Bạn không có quyền truy cập!'); </script>";
-				print "<meta http-equiv='refresh' content='0; index.php'>";
-				break;
-			}
-		}
-		case "tintucad":
-		{
-			if ($_SESSION['admin']==1)
-			{
-				include_once("admin/tintucad.php");
-			break;
-			}
-			else
-			{
-				print "<script type=text/javascript> alert('Bạn không có quyền truy cập!'); </script>";
-				print "<meta http-equiv='refresh' content='0; index.php'>";
-				break;
-			}
-		}
-		case "thinghiemad":
-		{
-			if ($_SESSION['admin']==1)
-			{
-				include_once("admin/thinghiemad.php");
-			break;
-			}
-			else
-			{
-				print "<script type=text/javascript> alert('Bạn không có quyền truy cập!'); </script>";
-				print "<meta http-equiv='refresh' content='0; index.php'>";
-				break;
-			}
-		}
-		case "suckhoead":
-		{
-			if ($_SESSION['admin']==1)
-			{
-				include_once("admin/suckhoead.php");
+				include_once("admin/do-themnguoidung.php");
 			break;
 			}
 			else
@@ -295,11 +169,11 @@
 				break;
 			}
 		}
-		case "thaotac":
+		case "xoanguoidung":
 		{
 			if ($_SESSION['admin']==1)
 			{
-				include_once("admin/thaotac.php");
+				include_once("admin/xoanguoidung.php");
 			break;
 			}
 			else
@@ -309,11 +183,55 @@
 				break;
 			}
 		}
-		case "xemchucnang":
+		//cauhoi
+		case "cauhoiad":
 		{
 			if ($_SESSION['admin']==1)
 			{
-				include_once("admin/xemchucnang.php");
+				include_once("admin/cauhoiad.php");
+			break;
+			}
+			else
+			{
+				print "<script type=text/javascript> alert('Bạn không có quyền truy cập!'); </script>";
+				print "<meta http-equiv='refresh' content='0; index.php'>";
+				break;
+			}
+		}
+		case "xemcauhoi":
+		{
+			if ($_SESSION['admin']==1)
+			{
+				include_once("admin/xemcauhoi.php");
+			break;
+			}
+			else
+			{
+				print "<script type=text/javascript> alert('Bạn không có quyền truy cập!'); </script>";
+				print "<meta http-equiv='refresh' content='0; index.php'>";
+				break;
+			}
+		}
+		case "themcauhoi":
+		{
+			if ($_SESSION['admin']==1)
+			{
+				include_once("admin/themcauhoi.php");
+			break;
+			}
+			else
+			{
+				print "<script type=text/javascript> alert('Bạn không có quyền truy cập!'); </script>";
+				print "<meta http-equiv='refresh' content='0; index.php'>";
+				break;
+			}
+		}
+		//monhoc
+		case "monhocad":
+		{
+			if ($_SESSION['admin']==1)
+			{
+				include_once("admin/monhocad.php");
 			break;
 			}
 			else
@@ -336,63 +254,119 @@
 				print "<meta http-equiv='refresh' content='0; index.php'>";
 				break;
 			}
-
 		}
-			case "themnguoidung":
+		case "suamonhoc":
+		{
+			if ($_SESSION['admin']==1)
 			{
-				if ($_SESSION['admin']==1)
-				{
-					include_once("admin/themnguoidung.php");
-				break;
-				}
-				else
-				{
-					print "<script type=text/javascript> alert('Bạn không có quyền truy cập!'); </script>";
-					print "<meta http-equiv='refresh' content='0; index.php'>";
-					break;
-				}
+				include_once("admin/suamonhoc.php");
+			break;
 			}
-			case "do-themnguoidung":
+			else
 			{
-				if ($_SESSION['admin']==1)
-				{
-					include_once("admin/do-themnguoidung.php");
+				print "<script type=text/javascript> alert('Bạn không có quyền truy cập!'); </script>";
+				print "<meta http-equiv='refresh' content='0; index.php'>";
 				break;
-				}
-				else
-				{
-					print "<script type=text/javascript> alert('Bạn không có quyền truy cập!'); </script>";
-					print "<meta http-equiv='refresh' content='0; index.php'>";
-					break;
-				}
 			}
-			case "themnuser":
+		}
+		case "do-suamonhoc":
+		{
+			if ($_SESSION['admin']==1)
 			{
-				if ($_SESSION['admin']==1)
-				{
-					include_once("admin/themuser.php");
-				break;
-				}
-				else
-				{
-					print "<script type=text/javascript> alert('Bạn không có quyền truy cập!'); </script>";
-					print "<meta http-equiv='refresh' content='0; index.php'>";
-					break;
-				}
+				include_once("admin/do-suamonhoc.php");
+			break;
 			}
-			case "themcauhoi":
+			else
 			{
-				if ($_SESSION['admin']==1)
-				{
-					include_once("admin/themcauhoi.php");
+				print "<script type=text/javascript> alert('Bạn không có quyền truy cập!'); </script>";
+				print "<meta http-equiv='refresh' content='0; index.php'>";
 				break;
-				}
-				else
-				{
-					print "<script type=text/javascript> alert('Bạn không có quyền truy cập!'); </script>";
-					print "<meta http-equiv='refresh' content='0; index.php'>";
-					break;
-				}
 			}
+		}
+		//dethi
+		case "dethiad":
+		{
+			if ($_SESSION['admin']==1)
+			{
+				include_once("admin/dethiad.php");
+			break;
+			}
+			else
+			{
+				print "<script type=text/javascript> alert('Bạn không có quyền truy cập!'); </script>";
+				print "<meta http-equiv='refresh' content='0; index.php'>";
+				break;
+			}
+		}
+		case "xemdethi":
+		{
+			if ($_SESSION['admin']==1)
+			{
+				include_once("admin/xemdethi.php");
+			break;
+			}
+			else
+			{
+				print "<script type=text/javascript> alert('Bạn không có quyền truy cập!'); </script>";
+				print "<meta http-equiv='refresh' content='0; index.php'>";
+				break;
+			}
+		}
+		case "suadethi":
+		{
+			if ($_SESSION['admin']==1)
+			{
+				include_once("admin/suadethi.php");
+			break;
+			}
+			else
+			{
+				print "<script type=text/javascript> alert('Bạn không có quyền truy cập!'); </script>";
+				print "<meta http-equiv='refresh' content='0; index.php'>";
+				break;
+			}
+		}
+		case "tintucad":
+		{
+			if ($_SESSION['admin']==1)
+			{
+				include_once("admin/tintucad.php");
+			break;
+			}
+			else
+			{
+				print "<script type=text/javascript> alert('Bạn không có quyền truy cập!'); </script>";
+				print "<meta http-equiv='refresh' content='0; index.php'>";
+				break;
+			}
+		}
+		case "suckhoead":
+		{
+			if ($_SESSION['admin']==1)
+			{
+				include_once("admin/suckhoead.php");
+			break;
+			}
+			else
+			{
+				print "<script type=text/javascript> alert('Bạn không có quyền truy cập!'); </script>";
+				print "<meta http-equiv='refresh' content='0; index.php'>";
+				break;
+			}
+		}
+		case "biquyetad":
+		{
+			if ($_SESSION['admin']==1)
+			{
+				include_once("admin/biquyetad.php");
+			break;
+			}
+			else
+			{
+				print "<script type=text/javascript> alert('Bạn không có quyền truy cập!'); </script>";
+				print "<meta http-equiv='refresh' content='0; index.php'>";
+				break;
+			}
+		}
 	}
 ?>

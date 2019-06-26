@@ -12,13 +12,13 @@
   if(isset($_POST['ook']))
   {
     $arr=$_POST;
-    foreach ($arr as $key => $value) 
+    foreach ($arr as $key => $value)
     {
       if(is_numeric($key))
       {
         $sqll="SELECT dapan from cauhoi where idcauhoi={$key} limit 1";
         $result1=$conn->query($sqll);
-        while ($dad = $result1->fetch_assoc()) 
+        while ($dad = $result1->fetch_assoc())
         {
           if($value==$dad['dapan'])
           {
@@ -31,7 +31,8 @@
     $iddt=$_GET['iddt'];
     $res=$conn->query("INSERT INTO ketqua(userid, iddt, points,datetime) VALUES({$_SESSION['user_me']}, {$iddt}, {$DIEM},'{$dt}')");
     print "<script language='JavaScript'>alert('Số điểm bạn đạt được là: {$DIEM}');</script>";
-    print "<meta http-equiv='refresh' content='0;'>";
+
+		print "<meta http-equiv='refresh' content='0;index.php?thread=dapan&iddt=$iddt'>";
   }
 
 ?>
